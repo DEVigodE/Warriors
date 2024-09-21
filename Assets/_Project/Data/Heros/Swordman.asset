@@ -13,4 +13,5 @@ MonoBehaviour:
   m_Name: Swordman
   m_EditorClassIdentifier: 
   prefab: {fileID: 7040917681304149494, guid: e7ea32764957eb44da3b1173b55caee8, type: 3}
+  weapon: {fileID: 11400000, guid: 8d05573674906ff4db2b82e659384a20, type: 2}
   speed: 1.8

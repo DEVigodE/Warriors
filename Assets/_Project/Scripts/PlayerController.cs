@@ -21,6 +21,8 @@ public class PlayerController : MonoBehaviour
 
         GameObject heroInstance = Instantiate(hero.prefab, transform.position, Quaternion.identity, transform);
         playerAnim = heroInstance.GetComponent<Animator>();
+
+        Instantiate(hero.weapon.prefab, this.transform);
     }
 
     void Update()
@@ -59,5 +61,10 @@ public class PlayerController : MonoBehaviour
         Vector3 localScale = transform.localScale;
         localScale.x *= -1;
         transform.localScale = localScale;
+    }
+
+    public bool GetIsLookLeft()
+    {
+        return isLookLeft;
     }
 }

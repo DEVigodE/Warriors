@@ -4,6 +4,7 @@ using UnityEngine;
 public class HeroData : ScriptableObject
 {
     public GameObject prefab;
+    public WeaponData weapon;
     //public string heroName;
     //public int health;
     //public int attack;
