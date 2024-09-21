@@ -62,7 +62,7 @@ CapsuleCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
@@ -83,7 +83,7 @@ GameObject:
   - component: {fileID: 5188777557856388966}
   - component: {fileID: 3112356409950910592}
   - component: {fileID: 7799948881743049080}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Skeleton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -259,4 +259,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a677a87fadff02e408612c457e79a9e2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyData: {fileID: 0}
+  enemyData: {fileID: 11400000, guid: 0c5966fc14ded084787f35cc9652c181, type: 2}
+  hitArea: {fileID: 4292688568011080392}
