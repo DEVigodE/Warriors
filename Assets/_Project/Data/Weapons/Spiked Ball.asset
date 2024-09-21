@@ -9,9 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 11950a9fadb5a1a4bbe391ad717ad861, type: 3}
-  m_Name: Swordman
+  m_Script: {fileID: 11500000, guid: 904e66ad4dcb029419479b1c19a48db1, type: 3}
+  m_Name: Spiked Ball
   m_EditorClassIdentifier: 
-  prefab: {fileID: 7040917681304149494, guid: e7ea32764957eb44da3b1173b55caee8, type: 3}
-  weapon: {fileID: 11400000, guid: c8e6c000e3c163c47a0a4b528cbde682, type: 2}
-  speed: 1.8
+  prefab: {fileID: 6042360633686420333, guid: 3e14c22939574b149ad973f28464903d, type: 3}

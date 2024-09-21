@@ -14,7 +14,7 @@ public class PlayerController : MonoBehaviour
     private float moveVertical;
     private Vector2 moveDirection;
 
-    void Start()
+    void Awake()
     {
         // Cache components and hero prefab instance
         playerRb = GetComponent<Rigidbody2D>();
