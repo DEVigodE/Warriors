@@ -395,7 +395,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5724dc0b8f1e154fa9dcdb216118a66, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  selectedHero: {fileID: 11400000, guid: 1e685b8eb9ca69946b6b712d75fab9d6, type: 2}
+  selectedHero: {fileID: 11400000, guid: 50bc7da136e2bad40bb55108217de6b3, type: 2}
 --- !u!4 &1678430741
 Transform:
   m_ObjectHideFlags: 0

@@ -12,6 +12,7 @@ public class PlayerController : MonoBehaviour
     // Cached input to avoid frequent GetAxis calls in Update
     private float moveHorizontal;
     private float moveVertical;
+    private Vector2 moveDirection;
 
     void Start()
     {
@@ -31,7 +32,7 @@ public class PlayerController : MonoBehaviour
         moveHorizontal = Input.GetAxisRaw("Horizontal");
         moveVertical = Input.GetAxisRaw("Vertical");
 
-        Vector2 moveDirection = new Vector2(moveHorizontal, moveVertical).normalized;
+         moveDirection = new Vector2(moveHorizontal, moveVertical).normalized;
 
         // Flip the character based on movement direction
         if (moveDirection.x < 0 && !isLookLeft)
@@ -66,5 +67,10 @@ public class PlayerController : MonoBehaviour
     public bool GetIsLookLeft()
     {
         return isLookLeft;
+    }
+
+    public Vector2 GetMoveDirection()
+    {
+        return moveDirection;
     }
 }
