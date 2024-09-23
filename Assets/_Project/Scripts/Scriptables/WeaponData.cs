@@ -5,4 +5,6 @@ using UnityEngine;
 public class WeaponData : ScriptableObject
 {
     public GameObject prefab;
+    public float damage;
+    public float knockback;
 }

@@ -12,4 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a401666ef7fae7d47ba5b08b7b5b5d62, type: 3}
   m_Name: Skeleton
   m_EditorClassIdentifier: 
-  prefab: {fileID: 0}
+  enemyName: Skeleton
+  enemyPortrait: {fileID: 21300000, guid: b851c47cab0ae5a4db2457f5503285b8, type: 3}
+  prefab: {fileID: 6858493793484680078, guid: 5595af489cb293b46a2bab5dfb00a875, type: 3}
+  targetUpdateDelay: 0.5
+  moveSpeed: 1.5
+  maxHealth: 30
+  damage: 15
+  xp: 25

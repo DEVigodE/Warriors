@@ -1,7 +1,7 @@
 using System.Collections;
 using UnityEngine;
 
-public class EnemyAI : MonoBehaviour
+public class EnemyAI : MonoBehaviour, IDamageable
 {
     public EnemyData enemyData;
     private Vector3 target;
@@ -19,6 +19,7 @@ public class EnemyAI : MonoBehaviour
     {
         _rigidbody2D = GetComponent<Rigidbody2D>();
         StartCoroutine(nameof(IETargetUpdate));
+        currentHealth = enemyData.maxHealth;
     }
 
     // Update is called once per frame
@@ -34,6 +35,15 @@ public class EnemyAI : MonoBehaviour
             yield return new WaitForSeconds(enemyData.targetUpdateDelay);
             target = Core.Instance.gameManager.player.position;
             moveDirection = (target - transform.position).normalized;
+        }
+    }
+
+    public void TakeDamage(float damage, float knockback)
+    {
+        currentHealth -= damage;
+        if (currentHealth <= 0)
+        {
+            Destroy(this.gameObject);
         }
     }
 }
