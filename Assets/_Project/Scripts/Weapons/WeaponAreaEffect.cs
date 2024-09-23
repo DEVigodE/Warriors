@@ -14,13 +14,6 @@ public class WeaponAreaEffect : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        //IDamageable damageable = collision.GetComponent<IDamageable>();
-        //if (damageable != null)
-        //{
-        //    damageable.TakeDamage(data.damage, data.knockback);
-        //}
-
-
         if (collision.TryGetComponent(out IDamageable damageable))
         {
             damageable.TakeDamage(data.damage,data.knockback);
