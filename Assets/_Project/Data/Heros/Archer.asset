@@ -15,3 +15,4 @@ MonoBehaviour:
   prefab: {fileID: 1097599089464520806, guid: 6b330c6ac58d4d14e9ec10dd4d372fd4, type: 3}
   weapon: {fileID: 11400000, guid: 3cf75658509bb694f9e15ea53694bc86, type: 2}
   speed: 2.3
+  maxHealth: 50

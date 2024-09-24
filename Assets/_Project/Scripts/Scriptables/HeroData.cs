@@ -15,7 +15,7 @@ public class HeroData : ScriptableObject
     //public int experience;
     //public int experienceToNextLevel;
     //public int gold;
-    //public int maxHealth;
+    public float maxHealth;
     //public int maxAttack;
     //public int maxDefense;
     //public int maxSpeed;

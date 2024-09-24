@@ -17,4 +17,6 @@ public class EnemyData : ScriptableObject
 
     public float knockbackWeakeness;
 
+    public float attackSpeed;
+
 }

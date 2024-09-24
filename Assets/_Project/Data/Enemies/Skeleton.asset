@@ -20,3 +20,5 @@ MonoBehaviour:
   maxHealth: 30
   damage: 15
   xp: 25
+  knockbackWeakeness: -2
+  attackSpeed: 0.8
