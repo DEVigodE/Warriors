@@ -34,6 +34,15 @@ public class EnemyAI : MonoBehaviour, IDamageable
             knockbackFactor = 1;
         }
 
+        if(moveDirection.x > 0 && isLookLeft)
+        {
+            Flip();
+        }
+        else if (moveDirection.x < 0 && !isLookLeft)
+        {
+            Flip();
+        }
+
         _rigidbody2D.linearVelocity = moveDirection * enemyData.moveSpeed * knockbackFactor;
     }
 
@@ -55,5 +64,11 @@ public class EnemyAI : MonoBehaviour, IDamageable
         {
             Destroy(this.gameObject);
         }
+    }
+
+    void Flip()
+    {
+        isLookLeft = !isLookLeft;
+        transform.localScale = new Vector3(-transform.localScale.x, transform.localScale.y, transform.localScale.z);
     }
 }
