@@ -17,6 +17,6 @@ MonoBehaviour:
   prefab: {fileID: 809042639229685227, guid: ac24c5958010d3c4389e0b61a78c5cd0, type: 3}
   targetUpdateDelay: 0.5
   moveSpeed: 0.8
-  maxHealth: 5
+  maxHealth: 100
   damage: 3
   xp: 1

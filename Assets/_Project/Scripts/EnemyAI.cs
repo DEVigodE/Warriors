@@ -11,7 +11,7 @@ public class EnemyAI : MonoBehaviour, IDamageable
 
     private float currentHealth;
     private float knockbackTime;
-    private int knockbackFactor = 1;
+    private float knockbackFactor = 1f;
 
     public GameObject hitArea;
 
@@ -25,6 +25,15 @@ public class EnemyAI : MonoBehaviour, IDamageable
     // Update is called once per frame
     void Update()
     {
+        if(knockbackTime > 0) {
+            knockbackFactor = enemyData.knockbackWeakeness;
+            knockbackTime -= Time.deltaTime;
+        }
+        else
+        {
+            knockbackFactor = 1;
+        }
+
         _rigidbody2D.linearVelocity = moveDirection * enemyData.moveSpeed * knockbackFactor;
     }
 
@@ -41,6 +50,7 @@ public class EnemyAI : MonoBehaviour, IDamageable
     public void TakeDamage(float damage, float knockback)
     {
         currentHealth -= damage;
+        knockbackTime = knockback;
         if (currentHealth <= 0)
         {
             Destroy(this.gameObject);

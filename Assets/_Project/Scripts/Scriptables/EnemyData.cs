@@ -15,4 +15,6 @@ public class EnemyData : ScriptableObject
     public float damage;
     public int xp;
 
+    public float knockbackWeakeness;
+
 }

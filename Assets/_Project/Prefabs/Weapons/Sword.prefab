@@ -46,7 +46,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   projectile: {fileID: 1531348232895311952, guid: 15641bc783079374a9e3c265c39e9f48, type: 3}
-  delayAttack: 2
+  delayAttack: 1
   slashPivot: {fileID: 3913299648019847624}
 --- !u!1 &3828076465532590074
 GameObject:
