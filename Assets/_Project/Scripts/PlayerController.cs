@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class PlayerController : MonoBehaviour
 {
@@ -28,25 +29,22 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-        // Read player input and normalize the direction
-        moveHorizontal = Input.GetAxisRaw("Horizontal");
-        moveVertical = Input.GetAxisRaw("Vertical");
-
-         moveDirection = new Vector2(moveHorizontal, moveVertical).normalized;
-
-        // Flip the character based on movement direction
-        if (moveDirection.x < 0 && !isLookLeft)
+        if (moveDirection != Vector2.zero)
         {
-            Flip();
-        }
-        else if (moveDirection.x > 0 && isLookLeft)
-        {
-            Flip();
-        }
+            // Read player input and normalize the direction
+            moveHorizontal = moveDirection.x;
+            moveVertical = moveDirection.y;
 
-        // Update walking animation
-        isWalking = moveDirection != Vector2.zero;
+            // Update walking animation
+            isWalking = true;
+            //isWalking = moveDirection != Vector2.zero;
+        }
+        else
+        {
+            isWalking = false;
+        }
         playerAnim.SetBool("isWalking", isWalking);
+
     }
 
     void FixedUpdate()
@@ -55,6 +53,7 @@ public class PlayerController : MonoBehaviour
         Vector2 moveDirection = new Vector2(moveHorizontal, moveVertical).normalized;
         playerRb.MovePosition(playerRb.position + moveDirection * hero.speed * Time.fixedDeltaTime);
     }
+
 
     void Flip()
     {
@@ -72,5 +71,10 @@ public class PlayerController : MonoBehaviour
     public Vector2 GetMoveDirection()
     {
         return moveDirection;
+    }
+
+    public void setMoviment(InputAction.CallbackContext context)
+    {
+        moveDirection = context.ReadValue<Vector2>().normalized;
     }
 }
